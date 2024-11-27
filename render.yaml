@@ -15,6 +15,6 @@ services:
     startCommand: npm start
     autoDeploy: true # Disable automatic deploys
     previews:
-      generation: automatic 
+      plan: starter
    
    
