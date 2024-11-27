@@ -1,7 +1,4 @@
 
-previews:
-  generation: automatic # Enable preview environments
-
 services:
   - type: web
     runtime: node
