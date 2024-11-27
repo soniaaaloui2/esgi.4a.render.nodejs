@@ -5,19 +5,22 @@ previews:
 services:
   - type: web
     runtime: node
-    name: cloud-app
-    repo: https://github.com/soniaaaloui2/esgi.4a.render.nodejs.git # Default: Repo containing render.yaml
-    region: oregon # Default: oregon
+    name: cloud-bp-app
+    region: frankfurt # Default: oregon
     plan: free    # Default: starter
-    branch: main      # Default: master
     buildCommand: npm install
-    preDeployCommand: $
     startCommand: npm start
-    autoDeploy: true # Disable automatic deploys
-    previews:
-      plan: starter
-    envVars: # Environment variables
-      - key: ADATABASE_URL
-        value: postgresql://first_data_base_user:ZAuTmni2br9y87YJ1eR6DOeSfPcUWnMy@dpg-csh3jt3tq21c73e2qugg-a/first_data_base # Hardcoded value  
-   
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: bp-db
+          property: connectionString
+
+
+databases:
+  - name: bp-db
+    plan: free
+    region: frankfurt
+    
+    
    
