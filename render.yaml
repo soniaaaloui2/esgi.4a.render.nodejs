@@ -1,0 +1,17 @@
+
+previews:
+  generation: automatic # Enable preview environments
+
+services:
+  - type: web
+    runtime: node
+    name: cloud-app
+    repo: https://github.com/soniaaaloui2/esgi.4a.render.nodejs.git # Default: Repo containing render.yaml
+    region: oregon # Default: oregon
+    plan: standard    # Default: starter
+    branch: main      # Default: master
+    buildCommand: npm install
+    preDeployCommand: $
+    startCommand: npm start
+    autoDeploy: true # Disable automatic deploys
+   
