@@ -8,7 +8,7 @@ services:
     name: cloud-app
     repo: https://github.com/soniaaaloui2/esgi.4a.render.nodejs.git # Default: Repo containing render.yaml
     region: oregon # Default: oregon
-    plan: standard    # Default: starter
+    plan: free    # Default: starter
     branch: main      # Default: master
     buildCommand: npm install
     preDeployCommand: $
